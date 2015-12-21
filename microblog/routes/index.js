@@ -6,10 +6,30 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/list', function(req, res) {
-  res.render('list', {
-    title: 'List',
-    items: [1991, 'test']
-  });
+router.get('/u/:username', function(req, res) {
 });
+
+router.post('/post', function(req, res) {
+});
+
+router.get('/reg', function(req, res) {
+
+});
+
+router.post('/reg', function(req, res) {
+
+});
+
+router.get('/login', function(req, res) {
+
+});
+
+router.post('/login', function(req, res) {
+
+});
+
+router.get('logout', function(req, res) {
+
+});
+
 module.exports = router;
