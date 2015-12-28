@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/u/:username', function(req, res) {
+  //-res.send('user: ' + req.params.username);
 });
 
 router.post('/post', function(req, res) {
