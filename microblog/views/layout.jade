@@ -1,12 +1,11 @@
 doctype html
 html
   head
-    - var bs_css_source   = '/bootstrap/dist/css/bootstrap.min.css'
-    - var bs_js_source    = '/bootstrap/dist/js/bootstrap.min.js'
-    - var main_css_source = '/stylesheets/style.css'
-    title= title
-    link(rel='stylesheet', href=bs_css_source)
-    link(rel='stylesheet', href=main_css_source)
-    script(src=bs_js_source)
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    //- include attributes.jade
+    include ./includes/attributes.jade
   body
-    block content
+    include ./includes/header.jade
+    div.container
+      block content
