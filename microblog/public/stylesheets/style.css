@@ -8,8 +8,13 @@ a {
 }
 
 .start-template {
+  background-color: #EEEEEE;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 20px;
+  margin-bottom: auto;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
