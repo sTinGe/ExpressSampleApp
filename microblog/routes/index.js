@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/u/:username', function(req, res) {
-  //-res.send('user: ' + req.params.username);
+  res.send('user: ' + req.params.username);
 });
 
 router.post('/post', function(req, res) {
@@ -29,8 +29,12 @@ router.post('/login', function(req, res) {
 
 });
 
-router.get('logout', function(req, res) {
+router.get('/logout', function(req, res) {
 
+});
+
+router.get('/show', function(req, res) {
+  
 });
 
 module.exports = router;
