@@ -7,7 +7,7 @@ a {
   color: #00B7FF;
 }
 
-.start-template {
+.index_container {
   background-color: #EEEEEE;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -20,7 +20,9 @@ a {
   text-align: center;
 }
 
-.btn {
-  margin-left: 5px;
-  margin-right: 5px;
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0px auto;
 }
+

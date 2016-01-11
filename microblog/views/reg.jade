@@ -1,21 +1,10 @@
 extends layout
 
 block content
-  form.form-horizontal(method='post')
-    fieldset
-      h1 User Registration
-      div.control-group
-        label.control-label(for='username') Username
-        div.controls
-          input.input-xlarge#username(type='text', name='username')
-      div.control-group
-        label.control-label(for='password') Password
-        div.controls
-          input.input-xlarge#password(type='password', name='password')
-      div.control-group
-        label.control-label(for='password-repeat') Repeat password
-        div.controls
-          input.input-xlarge#password-repeat(type='password', name='password-repeat')
-      div.form-actions
-        button.btn.btn-primary(type='submit') Register
-
+  form.form-signin(role='form')
+    h2.form-signin-heading(align='center')= title
+    label.sr-only(for='inputEmail') Email address
+    input.form-control#inputEmail(type='email', placeholder='Email address' required autofocus)
+    label.sr-only(for='inputPassword') Password
+    input.form-control#inputPassword(type='password', placeholder='Password' required)
+    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
