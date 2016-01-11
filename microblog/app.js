@@ -24,7 +24,7 @@ app.use(session({
   proxy: true,
   resave: false,
   store: new MongoStore({
-    url: 'mongodb://localhost/microblog'
+    url: 'mongodb://localhost/' + settings.db
   }),
   saveUninitialized: true
 }));
