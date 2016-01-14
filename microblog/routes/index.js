@@ -11,7 +11,6 @@ router.get('/u/:username', function(req, res) {
 });
 
 router.post('/post', function(req, res) {
-
 });
 
 router.get('/reg', function(req, res) {
@@ -19,7 +18,14 @@ router.get('/reg', function(req, res) {
 });
 
 router.post('/reg', function(req, res) {
-
+  req.flash('test', 'it worked');
+  if (req.body['password-repeat'] != req.body['password']) {
+    req.flash('test', 'it worked');
+    return res.redirect('/reg');
+  } else {
+    req.flash('success', 'the same password');
+    return res.redirect('/');
+  }
 });
 
 router.get('/login', function(req, res) {

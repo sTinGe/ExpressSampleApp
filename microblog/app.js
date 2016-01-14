@@ -10,6 +10,7 @@ var users = require('./routes/users');
 
 var settings = require('./settings');
 var session = require('express-session');
+var flash = require('connect-flash');
 var MongoStore = require('connect-mongo')(session);
 var app = express();
 
@@ -17,6 +18,13 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.set('trust proxy', 1);
+
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 // add session for maintaining user related information
 app.use(session({
@@ -28,15 +36,7 @@ app.use(session({
   }),
   saveUninitialized: true
 }));
-
-
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
